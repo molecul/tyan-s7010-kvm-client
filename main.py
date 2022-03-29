@@ -58,9 +58,6 @@ It also enables the user to redirect his local keyboard, mouse for managing the 
 class Client:
     def __init__(self, ip, user, password):
         self.api = requests.session()
-        self.api.proxies = {
-            'http': 'http://127.0.0.1:8888'
-        }
         self.ip = ip
         self.user = user
         self.password = password
@@ -100,5 +97,5 @@ class Client:
 
 
 if __name__ == '__main__':
-    c = Client('192.168.88.105', 'root', 'superuser')
+    c = Client('192.168.88.106', 'root', 'superuser')
     c.gen_file()
